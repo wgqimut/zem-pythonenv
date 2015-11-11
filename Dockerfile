@@ -25,6 +25,6 @@ USER app
 WORKDIR /home/app
 ENV HOME /home/app
 
-RUN pip install tornado
-RUN pip install readline
+RUN sudo pip install tornado
+RUN sudo pip install readline
 CMD /bin/bash
