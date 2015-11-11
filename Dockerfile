@@ -17,7 +17,7 @@ RUN cd /opt \
 
 RUN cd /opt \        
         && curl --remote-name https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
-        && python2.7 ez_setup.py
+        && python2.7 ez_setup.py \
         && easy_install-2.7 pip
 
 RUN useradd app
