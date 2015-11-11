@@ -1,4 +1,4 @@
-FROM centos:6.5
+FROM centos:centos6.5
 MAINTAINER Grady Wong
 RUN yum groupinstall -y "Development tools"
 RUN yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel \
