@@ -19,12 +19,14 @@ RUN cd /opt \
         && curl --remote-name https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py \
         && python2.7 ez_setup.py \
         && easy_install-2.7 pip
+        
+RUN echo 'Defaults  secure_path=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin' >> /etc/sudoers.d
 
 RUN useradd app
 USER app
 WORKDIR /home/app
 ENV HOME /home/app
 
-RUN sudo pip install tornado
-RUN sudo pip install readline
+RUN pip install tornado
+RUN pip install readline
 CMD /bin/bash
