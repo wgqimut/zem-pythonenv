@@ -37,7 +37,7 @@ RUN cd /tmp && \
     pip install virtualenv
     
 # Install MySQLdb and tornado
-RUN yum install -y MySQL-python &&\
+RUN yum install -y MySQL-python python-devel mysql-devel && \
     pip install MySQL-python && \
     pip install tornado && \
     pip install psutil && \
