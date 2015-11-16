@@ -53,4 +53,6 @@ RUN yum install  -y pcre-devel.x86_64 pango-devel.x86_64 libxml2-devel.x86_64 \
     ./configure --prefix=/usr/local && \
     make && \
     make install && \
+    ln -s /usr/local/lib/librrd* /usr/lib && \
+    ldconfig && \
     pip install rrdtool
